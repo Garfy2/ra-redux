@@ -1,3 +1,0 @@
-[![Build status]
-
-[GitHub Pages]().
