@@ -1,37 +1,17 @@
-import {
-  CHANGE_SERVICE_FIELD,
-  RESET_FORM,
-  FILL_EDIT_FORM,
-} from '../actions/actionTypes';
+import { CHANGE_SERVICE_FIELD } from '../actions/actionTypes';
 
 const initialState = {
-  add: {
-    name: '',
-    price: '',
-  },
-  edit: {
-    id: '',
-    name: '',
-    price: '',
-  },
+  id: '',
+  name: '',
+  price: '',
 };
 
-export const serviceFormReducer = (state = initialState, { type, payload }) => {
-  switch (type) {
-    case CHANGE_SERVICE_FIELD: {
-      const { name, value, formType } = payload;
-      const formFields = state[formType];
-      return { ...state, [formType]: { ...formFields, [name]: value } };
-    }
-    case FILL_EDIT_FORM: {
-      const { id, name, price } = payload;
-      return { ...state, edit: { id, name, price } };
-    }
-    case RESET_FORM: {
-      const { formType } = payload;
-      return { ...state, [formType]: { name: '', price: '' } };
-    }
+export default function serviceFormReducer(state = initialState, action) {
+  switch (action.type) {
+    case CHANGE_SERVICE_FIELD:
+      const { name, value } = action.payload;
+      return { ...state, [name]: value };
     default:
       return state;
   }
-};
+}

@@ -1,27 +1,29 @@
 import { nanoid } from 'nanoid';
-
 import {
   ADD_SERVICE,
   REMOVE_SERVICE,
-  EDIT_SERVICE,
-  FILTER_SERVICES,
+  FILTER_SERVICE,
 } from '../actions/actionTypes';
 
-import { services } from '../constants/dataBase';
-
 const initialState = {
-  services,
-  filtered: null,
+  services: [
+    { id: nanoid(), name: 'Замена стекла', price: 21000 },
+    { id: nanoid(), name: 'Замена дисплея', price: 25000 },
+  ],
+  filtered: [],
+  activeFilter: '',
 };
 
-const filterByString = (string, services) => {
-  return services.filter((service) => service.name.toLowerCase().includes(string.toLowerCase()));
-};
-
-export const serviceListReducer = (state = initialState, { type, payload }) => {
-  switch (type) {
-    case ADD_SERVICE: {
-      const { name, price } = payload;
+export default function serviceListReducer(state = initialState, action) {
+  switch (action.type) {
+    case ADD_SERVICE:
+      const { id, name, price } = action.payload;
+      if (id) {
+        const editing = state.services.find((service) => service.id === id);
+        editing.name = name;
+        editing.price = price;
+        return { ...state };
+      }
       return {
         ...state,
         services: [
@@ -29,33 +31,25 @@ export const serviceListReducer = (state = initialState, { type, payload }) => {
           { id: nanoid(), name, price: Number(price) },
         ],
       };
-    }
-    case REMOVE_SERVICE: {
-      const { id } = payload;
+    case REMOVE_SERVICE:
+      const { removeId } = action.payload;
       return {
         ...state,
-        services: state.services.filter((service) => service.id !== id),
+        services: state.services.filter((service) => service.id !== removeId),
+        filtered: state.filtered.filter((service) => service.id !== removeId),
       };
-    }
-    case EDIT_SERVICE: {
-      const { id, name, price } = payload;
-      const serviceIndex = state.services.findIndex(
-        (service) => service.id === id,
+    case FILTER_SERVICE:
+      const { setFilter } = action.payload;
+      if (!setFilter) return { ...state, activeFilter: '', filtered: [] };
+      const filteredServices = state.services.filter((service) =>
+        service.name.toLowerCase().includes(setFilter.toLowerCase())
       );
-      const newServiceList = [...state.services];
-      newServiceList[serviceIndex] = { id, name, price };
-
       return {
         ...state,
-        services: newServiceList,
+        activeFilter: setFilter,
+        filtered: filteredServices,
       };
-    }
-    case FILTER_SERVICES: {
-      const { string } = payload;
-      return { ...state, filtered: filterByString(string, services) };
-    }
-
     default:
       return state;
   }
-};
+}

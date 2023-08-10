@@ -1,16 +1,17 @@
-import { createStore, combineReducers } from 'redux';
-
-import { serviceListReducer } from '../reducers/serviceList';
-import { serviceFormReducer } from '../reducers/serviceForm';
-import { editModalReducer } from '../reducers/editModal';
+import { createStore, combineReducers } from "redux";
+import serviceListReducer from '../reducers/serviceList';
+import serviceFormReducer from '../reducers/serviceForm';
+import serviceFilterReducer from '../reducers/serviceFilter';
 
 const reducer = combineReducers({
   serviceList: serviceListReducer,
   serviceForm: serviceFormReducer,
-  editModal: editModalReducer,
+  serviceFilter: serviceFilterReducer,
 });
 
-export const store = createStore(
+const store = createStore(
   reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
+
+export default store;
