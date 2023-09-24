@@ -1,8 +1,8 @@
 {
-  "name": "ra-redux",
+  "name": "ra-hw10-redux",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Garfy2/ra-redux/",
+  "homepage": "https://garfy2.github.io/ra-redux/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
