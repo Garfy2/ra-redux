@@ -1,23 +1,23 @@
 {
-    "files": {
-      "main.css": "/ra-hw10-redux/static/css/main.9d3da2b7.chunk.css",
-      "main.js": "/ra-hw10-redux/static/js/main.b3d6c16c.chunk.js",
-      "main.js.map": "/ra-hw10-redux/static/js/main.b3d6c16c.chunk.js.map",
-      "runtime-main.js": "/ra-hw10-redux/static/js/runtime-main.94bf0dea.js",
-      "runtime-main.js.map": "/ra-hw10-redux/static/js/runtime-main.94bf0dea.js.map",
-      "static/css/2.543f1d76.chunk.css": "/ra-hw10-redux/static/css/2.543f1d76.chunk.css",
-      "static/js/2.1eb54130.chunk.js": "/ra-hw10-redux/static/js/2.1eb54130.chunk.js",
-      "static/js/2.1eb54130.chunk.js.map": "/ra-hw10-redux/static/js/2.1eb54130.chunk.js.map",
-      "index.html": "/ra-hw10-redux/index.html",
-      "static/css/2.543f1d76.chunk.css.map": "/ra-hw10-redux/static/css/2.543f1d76.chunk.css.map",
-      "static/css/main.9d3da2b7.chunk.css.map": "/ra-hw10-redux/static/css/main.9d3da2b7.chunk.css.map",
-      "static/js/2.1eb54130.chunk.js.LICENSE.txt": "/ra-hw10-redux/static/js/2.1eb54130.chunk.js.LICENSE.txt"
-    },
-    "entrypoints": [
-      "static/js/runtime-main.94bf0dea.js",
-      "static/css/2.543f1d76.chunk.css",
-      "static/js/2.1eb54130.chunk.js",
-      "static/css/main.9d3da2b7.chunk.css",
-      "static/js/main.b3d6c16c.chunk.js"
-    ]
-  }
+  "files": {
+    "main.css": "/ra-hw10-redux/static/css/main.9d3da2b7.chunk.css",
+    "main.js": "/ra-hw10-redux/static/js/main.b3d6c16c.chunk.js",
+    "main.js.map": "/ra-hw10-redux/static/js/main.b3d6c16c.chunk.js.map",
+    "runtime-main.js": "/ra-hw10-redux/static/js/runtime-main.94bf0dea.js",
+    "runtime-main.js.map": "/ra-hw10-redux/static/js/runtime-main.94bf0dea.js.map",
+    "static/css/2.543f1d76.chunk.css": "/ra-hw10-redux/static/css/2.543f1d76.chunk.css",
+    "static/js/2.1eb54130.chunk.js": "/ra-hw10-redux/static/js/2.1eb54130.chunk.js",
+    "static/js/2.1eb54130.chunk.js.map": "/ra-hw10-redux/static/js/2.1eb54130.chunk.js.map",
+    "index.html": "/ra-hw10-redux/index.html",
+    "static/css/2.543f1d76.chunk.css.map": "/ra-hw10-redux/static/css/2.543f1d76.chunk.css.map",
+    "static/css/main.9d3da2b7.chunk.css.map": "/ra-hw10-redux/static/css/main.9d3da2b7.chunk.css.map",
+    "static/js/2.1eb54130.chunk.js.LICENSE.txt": "/ra-hw10-redux/static/js/2.1eb54130.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94bf0dea.js",
+    "static/css/2.543f1d76.chunk.css",
+    "static/js/2.1eb54130.chunk.js",
+    "static/css/main.9d3da2b7.chunk.css",
+    "static/js/main.b3d6c16c.chunk.js"
+  ]
+}
